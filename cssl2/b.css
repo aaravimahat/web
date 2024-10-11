@@ -1,0 +1,8 @@
+body{
+    background-color: rgb(212, 175, 126);
+    background-image: url("s.jpg");
+    background-repeat:no-repeat ;
+    background-position:center;
+    background-attachment: fixed;
+
+}
