@@ -40,3 +40,58 @@ body{
     background-color: azure;
     
 }
+
+#result{
+    height: 120px;
+}
+
+
+#output{
+    text-align: right;
+    height: 60px;
+    margin: 10px 20px;
+    font-size: 30;
+}
+
+#history{
+    text-align: right;
+    height: 50px;
+    margin: 0 20px;
+    padding-top: 20px;
+    font-size: 15px;
+    color:gray ;
+
+}
+
+button:nth-child(4){
+    font-size: 30px;
+    background-color: coral;
+}
+button:nth-child(8){
+    font-size: 30px;
+    background-color: lightgreen;
+
+}
+
+button:nth-child(12){
+    font-size: 30px;
+    background-color: yellow;
+    
+}
+
+button:nth-child(16){
+    font-size: 30px;
+    background-color: lightseagreen;
+    
+}
+
+button:nth-child(20){
+    font-size: 30px;
+    background-color: lightskyblue;
+    
+}
+
+
+
+
+
