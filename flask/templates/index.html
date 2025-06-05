@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Age calculator</h1>
+    <form action="/age" method="post">
+        <div id="div1">
+            <label>enter your birth date</label>
+            <input type="number" name="birth_year" id="birth_year">
+
+        </div>
+        <button type="submit">submit your birth year </button>
+    </form>
+
+    {%if age is not none%}
+    <h2>Your current age is {{age}}</h2>
+    {%endif%}
+
+    {%if age is not none%}
+    <h2>{{error}}</h2>
+    {%endif%}
+
+
+
+    
+    
+</body>
+</html>
