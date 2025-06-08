@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="loc_form">
+        <b>District</b>
+        <input type="text" id="district" name="district">
+        <button type="submit">FIND</button>
+    </form>
+
+    <p id="result"></p>
+    <script>
+        document.getElementById("loc_form").addEventListener("submit", (e)=>{
+            e.preventDefault()
+            let district=document.getElementById("district").value;
+            fetch("/locate",{
+                method:"POST",
+                body : new URLSearchParams({district})
+
+            }).then(response=> response.json()).then(data=>{
+                if (data.error){
+                    document.getElementById("result").innerHTML=data.error;
+                }
+
+                else{
+                    document.getElementById("result").innerHTML=`State : ${data.state} country:${data.country}`;
+
+                }
+            }).catch(error=>console.log("error", error))
+        });
+    </script>
+    
+</body>
+</html>

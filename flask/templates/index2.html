@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e3f2fd;
+            text-align: center;
+            padding: 50px;
+        }
+        form {
+            margin: 20px auto;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 250px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background: #0288d1;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .result, .error {
+            margin-top: 30px;
+            padding: 15px;
+            border-radius: 8px;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .result {
+            background-color: #c8e6c9;
+        }
+        .error {
+            background-color: #ffcdd2;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌤️ Weather Forecast</h1>
+    <form method="POST">
+        <input type="text" name="city" placeholder="Enter city name" required>
+        <input type="submit" value="Get Weather">
+    </form>
+
+
+    {% if error %}
+        <div class="error">
+            <strong>{{ error }}</strong>
+        </div>
+    {% endif %}
+
+
+    {% if data %}
+        <div class="result">
+            <h2>Weather in {{ data.location }}</h2>
+            <p><strong>Temperature:</strong> {{ data.temp }}</p>
+            <p><strong>Country Code:</strong> {{ data.country_code }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>
+
+
