@@ -7,9 +7,6 @@ import subprocess
 def speak(text):
     engine=pyttsx3.init()
     engine.setProperty("rate",150)
-    c=engine.getProperty("voices")
-    for index,voice in enumerate(c):
-        print(voice.name)
    
     engine.say(text)
     engine.runAndWait()

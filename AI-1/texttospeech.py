@@ -46,7 +46,7 @@ def translate(text, target_language="es"):
 
 def display():
    print("available languages are these")
-   d={1:"hi", 2:"ta", 3:"te", 4:"ml",5:"gu",6:"pa",7:"bn", 8:"fr", 9:"ma", 10:"de"}
+   d={1:"ne", 2:"ta", 3:"te", 4:"ml",5:"gu",6:"pa",7:"bn", 8:"fr", 9:"ma", 10:"de"}
    print(d)
    ch=int(input("enter your choice"))
    return d.get(ch,"es")
